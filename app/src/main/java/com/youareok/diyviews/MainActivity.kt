@@ -31,7 +31,8 @@ class DiyViewAdapter : RecyclerView.Adapter<DiyViewViewHolder>() {
         Pair(CanvasConvertAty.TAG, CanvasConvertAty::class.java),
         Pair(PictureTextAty.TAG, PictureTextAty::class.java),
         Pair(LeafLoadingAty.TAG, LeafLoadingAty::class.java),
-        Pair(RadarAty.TAG, RadarAty::class.java)
+        Pair(RadarAty.TAG, RadarAty::class.java),
+        Pair(ContainerAty.TAG, ContainerAty::class.java)
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiyViewViewHolder {

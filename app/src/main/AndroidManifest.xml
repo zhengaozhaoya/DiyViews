@@ -21,6 +21,7 @@
         <activity android:name=".atys.PictureTextAty" />
         <activity android:name=".atys.LeafLoadingAty" />
         <activity android:name=".atys.RadarAty" />
+        <activity android:name=".atys.ContainerAty" />
     </application>
 
 </manifest>
