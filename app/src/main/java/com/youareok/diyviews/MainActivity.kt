@@ -9,10 +9,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.youareok.diyviews.atys.BasicGraphicsAty
-import com.youareok.diyviews.atys.CanvasConvertAty
-import com.youareok.diyviews.atys.LeafLoadingAty
-import com.youareok.diyviews.atys.PictureTextAty
+import com.youareok.diyviews.atys.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +30,8 @@ class DiyViewAdapter : RecyclerView.Adapter<DiyViewViewHolder>() {
         Pair(BasicGraphicsAty.TAG, BasicGraphicsAty::class.java),
         Pair(CanvasConvertAty.TAG, CanvasConvertAty::class.java),
         Pair(PictureTextAty.TAG, PictureTextAty::class.java),
-        Pair(LeafLoadingAty.TAG, LeafLoadingAty::class.java)
+        Pair(LeafLoadingAty.TAG, LeafLoadingAty::class.java),
+        Pair(RadarAty.TAG, RadarAty::class.java)
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiyViewViewHolder {
