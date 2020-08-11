@@ -13,6 +13,7 @@ import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.youareok.diyviews.views.BezierView
+import com.youareok.diyviews.views.MagicCircle
 import com.youareok.diyviews.views.WaterDropView
 
 class ContainerAty : AppCompatActivity() {
@@ -52,6 +53,9 @@ class SelectView @JvmOverloads constructor(
         },
         Pair("WaterDrop") { it ->
             WaterDropView(context)
+        },
+        Pair("MagicCircle") { it ->
+            MagicCircle(context)
         }
     )
 
