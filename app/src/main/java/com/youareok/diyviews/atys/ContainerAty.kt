@@ -12,9 +12,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.youareok.diyviews.views.BezierView
-import com.youareok.diyviews.views.MagicCircle
-import com.youareok.diyviews.views.WaterDropView
+import com.youareok.diyviews.views.*
 
 class ContainerAty : AppCompatActivity() {
 
@@ -56,6 +54,19 @@ class SelectView @JvmOverloads constructor(
         },
         Pair("MagicCircle") { it ->
             MagicCircle(context)
+        },
+        Pair("YinYangFish") { it ->
+            YinYangFish(context)
+        },
+        Pair("PathPlay") { it ->
+            PathPlay(context)
+        },
+        Pair("SearchLoading") { it ->
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                SearchLoading(context)
+            } else {
+                TODO("VERSION.SDK_INT < LOLLIPOP")
+            }
         }
     )
 
