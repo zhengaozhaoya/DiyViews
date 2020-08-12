@@ -37,17 +37,32 @@ class PathPlay @JvmOverloads constructor(
 
             mMatrix.reset()
 
-//            val degree = Math.atan2(tanArray[1].toDouble(), tanArray[0].toDouble()) * 180 / Math.PI
-//            mMatrix.postRotate(degree.toFloat(), mArrowBmp.width / 2f, mArrowBmp.height / 2f)
-//            mMatrix.postTranslate(
+
+//            mMatrix.preTranslate(
 //                posArray[0] - mArrowBmp.width / 2f,
 //                posArray[1] - mArrowBmp.height / 2f
+//            )
+//            val degree = Math.atan2(tanArray[1].toDouble(), tanArray[0].toDouble()) * 180 / Math.PI
+//            mMatrix.preRotate(degree.toFloat(), mArrowBmp.width / 2f, mArrowBmp.height / 2f)
+//            mMatrix.preScale(
+//                50f / mArrowBmp.width,
+//                50f / mArrowBmp.height,
+//                mArrowBmp.width / 2f,
+//                mArrowBmp.height / 2f
 //            )
 
             mPathMeasure.getMatrix(
                 mCurrentLength,
                 mMatrix,
                 PathMeasure.POSITION_MATRIX_FLAG or PathMeasure.TANGENT_MATRIX_FLAG
+            )
+            mMatrix.preTranslate(-mArrowBmp.width / 2f, -mArrowBmp.height / 2f)
+
+            mMatrix.preScale(
+                50f / mArrowBmp.width,
+                50f / mArrowBmp.height,
+                mArrowBmp.width / 2f,
+                mArrowBmp.height / 2f
             )
 
             it.drawBitmap(mArrowBmp, mMatrix, mPaint)

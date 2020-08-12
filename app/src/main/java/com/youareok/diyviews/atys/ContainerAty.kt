@@ -67,6 +67,9 @@ class SelectView @JvmOverloads constructor(
             } else {
                 TODO("VERSION.SDK_INT < LOLLIPOP")
             }
+        },
+        Pair("MatrixView") { it ->
+            MatrixView(it)
         }
     )
 
